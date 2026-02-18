@@ -1,0 +1,43 @@
+/* Lightbox Navigation */
+.lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    transition: 0.3s;
+    user-select: none;
+    z-index: 2001;
+}
+
+.lightbox-arrow:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--highlight-color);
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+@media (max-width: 768px) {
+    .lightbox-arrow {
+        font-size: 1.5rem;
+        padding: 0.8rem;
+    }
+
+    .lightbox-prev {
+        left: 10px;
+    }
+
+    .lightbox-next {
+        right: 10px;
+    }
+}
