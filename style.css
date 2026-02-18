@@ -909,3 +909,23 @@ h2 {
     transform: scale(1.02);
     border-color: var(--highlight-color);
 }
+
+
+/* Responsive Text Utilities */
+.mobile-title {
+    display: none;
+}
+
+.desktop-title {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .mobile-title {
+        display: block;
+    }
+
+    .desktop-title {
+        display: none;
+    }
+}
