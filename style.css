@@ -772,9 +772,11 @@ h2 {
 }
 
 .tab-btn.active {
-    background: var(--highlight-color);
-    border-color: var(--highlight-color);
-    color: #000;
+    background: #d32f2f;
+    /* Red - Premium shade */
+    border-color: #d32f2f;
+    color: #fff;
+    /* Ensure text is white */
 }
 
 /* Gallery Visibility */
