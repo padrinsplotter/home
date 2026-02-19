@@ -276,7 +276,8 @@ h2 {
     padding: 1rem 2.5rem;
     border-radius: 50px;
     /* actually 'pill' shape is more modern automotive. keeping it but maybe refining shadow */
-    font-size: 1rem;
+    font-size: 0.9rem;
+    /* Reduced from 1rem */
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
