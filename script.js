@@ -3,23 +3,46 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabBtns = document.querySelectorAll('.tab-btn');
     const galleries = document.querySelectorAll('.gallery');
 
-    tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
+    function switchTab(tabId) {
+        const btn = document.querySelector(`.tab-btn[data-tab="${tabId}"]`);
+        const targetGallery = document.getElementById(tabId);
+        
+        if (btn && targetGallery) {
             // Remove active class from all buttons and galleries
             tabBtns.forEach(b => b.classList.remove('active'));
             galleries.forEach(g => g.classList.remove('active'));
 
-            // Add active class to clicked button
+            // Add active class to clicked button and target gallery
             btn.classList.add('active');
+            targetGallery.classList.add('active');
+        }
+    }
 
-            // Show corresponding gallery
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
             const tabId = btn.getAttribute('data-tab');
-            const targetGallery = document.getElementById(tabId);
-            if (targetGallery) {
-                targetGallery.classList.add('active');
-            }
+            switchTab(tabId);
         });
     });
+
+    // Deep link support
+    function checkHash() {
+        const hash = window.location.hash.replace('#', '');
+        if (hash === 'residencial' || hash === 'automotivo') {
+            switchTab(hash);
+            
+            // Scroll to portfolio section if a hash is present on load
+            const portfolio = document.getElementById('portfolio');
+            if (portfolio) {
+                setTimeout(() => {
+                    portfolio.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+        }
+    }
+
+    window.addEventListener('load', checkHash);
+    window.addEventListener('hashchange', checkHash);
 
     // Lightbox Logic
     const lightbox = document.getElementById('lightbox');
