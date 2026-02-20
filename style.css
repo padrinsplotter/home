@@ -912,3 +912,46 @@ h2 {
     transform: scale(1.02);
     border-color: var(--highlight-color);
 }
+
+/* Residential CTA */
+.residential-cta {
+    margin-top: 2.5rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 3px solid #d32f2f;
+    border-radius: 0 12px 12px 0;
+}
+
+.residential-cta h3 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.residential-cta p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+}
+
+.btn-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #d32f2f;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.btn-text:hover {
+    gap: 0.8rem;
+    color: #ff4d4d;
+}
+
+.btn-text i {
+    font-size: 0.8rem;
+}
