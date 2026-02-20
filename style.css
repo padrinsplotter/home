@@ -913,8 +913,9 @@ h2 {
     border-color: var(--highlight-color);
 }
 
-/* Residential CTA */
-.residential-cta {
+/* Residential & Automotive CTAs */
+.residential-cta,
+.automotive-cta {
     margin-top: 2.5rem;
     padding: 2rem;
     background: rgba(255, 255, 255, 0.03);
@@ -922,14 +923,16 @@ h2 {
     border-radius: 0 12px 12px 0;
 }
 
-.residential-cta h3 {
+.residential-cta h3,
+.automotive-cta h3 {
     font-size: 1.2rem;
     color: #fff;
     margin-bottom: 0.5rem;
     letter-spacing: 1px;
 }
 
-.residential-cta p {
+.residential-cta p,
+.automotive-cta p {
     font-size: 0.95rem;
     color: var(--text-muted);
     margin-bottom: 1.2rem;
